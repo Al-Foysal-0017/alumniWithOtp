@@ -14,5 +14,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileUpload());
 
 app.use("/api/user", userRouter);
+app.use("/", (req, res) => {
+  res.send("Hello Naiem");
+});
 
 module.exports = app;
